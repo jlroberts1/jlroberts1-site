@@ -9,9 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -44,8 +42,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'James Roberts - Android Engineer',
+  description: "Resume and more information about James Roberts",
 };
 
 /**
@@ -69,24 +67,20 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Hi! I'm James Roberts.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm an Ohio based <strong className="text-stone-100">Android Engineer</strong>, currently working at <strong className="text-stone-100">Tinybeans</strong>, helping families turn their moments into memories.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me learning and experiementing with new <strong className="text-stone-100">platforms</strong> and <strong className="text-stone-100">languages</strong>, playing my <strong className="text-stone-100">guitar</strong>, or exploring my beautiful area via a <strong className="text-stone-100">hike</strong>, or <strong className="text-stone-100">motorcycle</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '../assets/resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +98,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am an Android Engineer that is passionate about technology, learning, and creating experiences. I am a Kotlin and Jetpack Compose lover. I have experience working with all of the latest Jetpack libraries such as Compose, Room, Media, WorkManager, and Material Design. I also have extensive experience in RxJava and Kotlin Coroutines / Flow, as well as Fragments and the View system. I am a big proponent of clean, sensible code, MVVM, and SOLID principles. While I'm always striving to learn how to be a better Android Engineer, currently I am also learning Go as well as some JS and React! If you want to know more, read on or contact me!`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Stoutsville, Ohio', Icon: MapIcon},
+    {label: 'Age', text: '41', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Korean / Native American / Caucasion', Icon: FlagIcon},
+    {label: 'Interests', text: 'Motorcycles, Guitar, Hiking', Icon: SparklesIcon},
+    {label: 'Study', text: 'Udacity Kotlin Android Developer Nanodegree', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Tinybeans', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -122,20 +114,24 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Development',
     skills: [
       {
-        name: 'English',
+        name: 'Mobile',
         level: 10,
       },
       {
-        name: 'French',
+        name: 'Backend',
         level: 4,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Web Frontend',
+        level: 5,
       },
+      {
+        name: 'CI / CD / CLI',
+        level: 7,
+      }
     ],
   },
   {
@@ -143,15 +139,19 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 5,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 5,
       },
       {
-        name: 'GraphQL',
+        name: 'HTML',
         level: 6,
+      },
+      {
+        name: 'CSS',
+        level: 5,
       },
     ],
   },
@@ -159,15 +159,15 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
+        name: 'Golang',
+        level: 7,
+      },
+      {
+        name: 'Java',
+        level: 7,
       },
       {
         name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
         level: 4,
       },
     ],
@@ -176,16 +176,16 @@ export const skills: SkillGroup[] = [
     name: 'Mobile development',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Android Native',
+        level: 10,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'iOS Native (Swift/Obj C)',
+        level: 6,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'KMP / CMP',
+        level: 7,
       },
     ],
   },
@@ -283,9 +283,9 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'July 2023 - Present',
+    location: 'Tinybeans',
+    title: 'Engineering Manager, Mobile',
     content: (
       <p>
         Describe work, special projects, notable achievements, what technologies you have been working with, and
@@ -294,13 +294,31 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'August 2022 - July 2023',
+    location: 'Tinybeans',
+    title: 'Lead Android Engineer',
     content: (
       <p>
         Describe work, special projects, notable achievements, what technologies you have been working with, and
         anything else that would be useful for an employer to know.
+      </p>
+    ),
+  },
+  {
+    date: 'May 2022 - August 2022',
+    location: 'PagerDuty',
+    title: 'CAP Android Developer',
+    content: (
+      <p>
+      </p>
+    ),
+  },
+  {
+    date: 'January 2017 - May 2022',
+    location: 'Babbling Brook',
+    title: 'Android Engineer',
+    content: (
+      <p>
       </p>
     ),
   },
@@ -336,27 +354,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'If you would like to reach out you can find me at any of the following places.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'james.lee.roberts1@gmail.com',
+      href: 'mailto:james.lee.roberts1@gmail.com',
     },
     {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.Twitter,
+      text: '@xoomdev',
+      href: 'https://x.com/xoomdev',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'jlroberts1',
+      href: 'https://github.com/jlroberts1',
     },
   ],
 };
@@ -365,9 +378,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/jlroberts1'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https:/www.linkedin.com/in/jlroberts1'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://x.com/xoomdev'},
 ];

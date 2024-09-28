@@ -1,4 +1,5 @@
-import {FC, memo, useCallback, useMemo, useState} from 'react';
+import emailjs from '@emailjs/browser';
+import { FC, memo, useCallback, useEffect, useMemo, useState } from 'react';
 
 interface FormData {
   name: string;
@@ -18,13 +19,33 @@ const ContactForm: FC = memo(() => {
 
   const [data, setData] = useState<FormData>(defaultData);
 
+  useEffect(() => {
+    const emailJsKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (!emailJsKey) {
+      console.error('EmailJS Public Key is not defined in environment variables');
+      return;
+    }
+    emailjs.init({
+      publicKey: emailJsKey,
+      blockHeadless: true,
+      blockList: {
+        list: [],
+        watchVariable: 'userEmail',
+      },
+      limitRate: {
+        id: 'app',
+        throttle: 10000,
+      }
+    });
+  }, []);
+
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
-      const {name, value} = event.target;
+      const { name, value } = event.target;
 
-      const fieldData: Partial<FormData> = {[name]: value};
+      const fieldData: Partial<FormData> = { [name]: value };
 
-      setData({...data, ...fieldData});
+      setData({ ...data, ...fieldData });
     },
     [data],
   );
@@ -32,10 +53,29 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      if (!serviceId) {
+        console.error('EmailJS Service ID is not defined in environment variables');
+        return;
+      }
+      if (!templateId) {
+        console.error('EmailJS Template ID is not defined in environment variables');
+        return;
+      }
+      const templateData = {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      };
+      emailjs.send(serviceId, templateId, templateData).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
     },
     [data],
   );
