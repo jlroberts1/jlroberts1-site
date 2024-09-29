@@ -8,7 +8,7 @@ import Section from '../Layout/Section';
 import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
-  const {imageSrc, logoSrc, name, description, actions} = heroData;
+  const {imageSrc, name, description, actions} = heroData;
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
@@ -20,14 +20,7 @@ const Hero: FC = memo(() => {
           priority
           src={imageSrc}
         />
-        <div className="z-10  max-w-screen-lg px-4 lg:px-0">
-          <Image
-            alt="Logo image"
-            className="rounded-full h-56 w-56 border-4 border-white shadow-lg mx-auto"
-            height={150}
-            src={logoSrc}
-            width={150}
-          />
+        <div className="z-10 max-w-screen-lg px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm z-10 md:mt-[-20px]">
             <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{name}</h1>
             {description}
