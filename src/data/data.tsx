@@ -11,7 +11,6 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import blogImage from '../images/testimonial.webp';
 import blogScreenshot from '../images/blog.webp';
 import heroImage from '../images/header-background.webp';
 import logoImage from '../images/logo.webp';
@@ -27,8 +26,10 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
+import blogImage from '../images/testimonial.webp';
 import {
   About,
+  BlogSection,
   ContactSection,
   ContactType,
   Hero,
@@ -36,7 +37,6 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  BlogSection,
   TimelineItem,
 } from './dataDef';
 

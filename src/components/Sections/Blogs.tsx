@@ -1,9 +1,10 @@
 import classNames from 'classnames';
-import {FC, memo, useEffect, useMemo, useRef, useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import {FC, memo, useEffect, useMemo, useRef, useState} from 'react';
+
 import {isApple, isMobile} from '../../config';
-import {SectionId, blog} from '../../data/data';
+import {blog,SectionId} from '../../data/data';
 import useWindow from '../../hooks/useWindow';
 import Section from '../Layout/Section';
 
