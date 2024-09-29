@@ -95,17 +95,17 @@ export interface TimelineItem {
 }
 
 /**
- * Testimonial section
+ * Blog section
  */
-export interface TestimonialSection {
+export interface BlogSection {
   imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
+  blog: Blog;
 }
 
-export interface Testimonial {
-  image?: string;
+export interface Blog {
   name: string;
-  text: string;
+  href: string;
+  description: string;
 }
 
 /**

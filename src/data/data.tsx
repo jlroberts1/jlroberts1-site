@@ -11,6 +11,8 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
+import blogImage from '../images/testimonial.webp';
+import blogScreenshot from '../images/blog.webp';
 import heroImage from '../images/header-background.webp';
 import logoImage from '../images/logo.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -25,7 +27,6 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
@@ -35,7 +36,7 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  TestimonialSection,
+  BlogSection,
   TimelineItem,
 } from './dataDef';
 
@@ -44,7 +45,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'James Roberts - Android Engineer',
-  description: "Resume and more information about James Roberts",
+  description: 'Resume and more information about James Roberts',
 };
 
 /**
@@ -58,7 +59,7 @@ export const SectionId = {
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
+  Blog: 'blog',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -73,10 +74,14 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm an Ohio based <strong className="text-stone-100">Android Engineer</strong>, currently working at <strong className="text-stone-100">Tinybeans</strong>, helping families turn their moments into memories.
+        I'm an Ohio based <strong className="text-stone-100">Android Engineer</strong>, currently working at{' '}
+        <strong className="text-stone-100">Tinybeans</strong>, helping families turn their moments into memories.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me learning and experiementing with new <strong className="text-stone-100">platforms</strong> and <strong className="text-stone-100">languages</strong>, playing my <strong className="text-stone-100">guitar</strong>, or exploring my beautiful area via a <strong className="text-stone-100">hike</strong>, or <strong className="text-stone-100">motorcycle</strong>.
+        In my free time time, you can catch me learning and experiementing with new{' '}
+        <strong className="text-stone-100">platforms</strong> and <strong className="text-stone-100">languages</strong>,
+        playing my <strong className="text-stone-100">guitar</strong>, or exploring my beautiful area via a{' '}
+        <strong className="text-stone-100">hike</strong>, or <strong className="text-stone-100">motorcycle</strong>.
       </p>
     </>
   ),
@@ -133,7 +138,7 @@ export const skills: SkillGroup[] = [
       {
         name: 'CI / CD / CLI',
         level: 7,
-      }
+      },
     ],
   },
   {
@@ -273,7 +278,13 @@ export const education: TimelineItem[] = [
     date: 'July 2021',
     location: 'Udacity',
     title: 'Android Kotlin Developer Nanodegreee',
-    content: <p>Comprehensive Nanodegree focused on Android development. Projects, courses, and practice covering custom views, lifecycles, architecure, persistence, networking, animations, testing, and much more. Real feedback during code reviews from facilitators.</p>,
+    content: (
+      <p>
+        Comprehensive Nanodegree focused on Android development. Projects, courses, and practice covering custom views,
+        lifecycles, architecure, persistence, networking, animations, testing, and much more. Real feedback during code
+        reviews from facilitators.
+      </p>
+    ),
   },
 ];
 
@@ -284,13 +295,25 @@ export const experience: TimelineItem[] = [
     title: 'Engineering Manager, Mobile',
     content: (
       <ul>
-        <li>&#8226; Lead the mobile engineering team, delivering high-quality apps with measurable performance
-          improvements.</li>
-        <li>&#8226; Oversee project timelines and milestones, ensuring timely and efficient delivery of mobile solutions.</li>
+        <li>
+          &#8226; Lead the mobile engineering team, delivering high-quality apps with measurable performance
+          improvements.
+        </li>
+        <li>
+          &#8226; Oversee project timelines and milestones, ensuring timely and efficient delivery of mobile solutions.
+        </li>
         <li>&#8226; Mentor and supportteammembers,fostering a collaborative and innovative work environment.</li>
-        <li>&#8226; Implement best practices in mobile development, achieving significant increases in user engagement.</li>
-        <li>&#8226; Improved project test coverages from 0 to 45% and implemented the use of feature flags to increase the quality and stability of releases.</li>
-        <li>&#8226; Created a standard for observability and traceability throughout the mobile projects to understand how our apps are performing.</li>
+        <li>
+          &#8226; Implement best practices in mobile development, achieving significant increases in user engagement.
+        </li>
+        <li>
+          &#8226; Improved project test coverages from 0 to 45% and implemented the use of feature flags to increase the
+          quality and stability of releases.
+        </li>
+        <li>
+          &#8226; Created a standard for observability and traceability throughout the mobile projects to understand how
+          our apps are performing.
+        </li>
       </ul>
     ),
   },
@@ -329,35 +352,38 @@ export const experience: TimelineItem[] = [
     title: 'Android Engineer',
     content: (
       <ul>
-        <li>&#8226; Developed cutting-edge Android applications, integrating new technologies to enhance the user experience and app functionality</li>
-        <li>&#8226; Optimized app performance, reducing load times and improving user retention rates through data-driven enhancements</li>
-        <li>&#8226; Conducted thorough code reviews and implemented best practices, significantly reducing bug rates in production releases.</li>
-        <li>&#8226; Pioneered adoptions of new Android frameworks, positioning the company at the forefront of mobile development trends</li>
+        <li>
+          &#8226; Developed cutting-edge Android applications, integrating new technologies to enhance the user
+          experience and app functionality
+        </li>
+        <li>
+          &#8226; Optimized app performance, reducing load times and improving user retention rates through data-driven
+          enhancements
+        </li>
+        <li>
+          &#8226; Conducted thorough code reviews and implemented best practices, significantly reducing bug rates in
+          production releases.
+        </li>
+        <li>
+          &#8226; Pioneered adoptions of new Android frameworks, positioning the company at the forefront of mobile
+          development trends
+        </li>
       </ul>
     ),
   },
 ];
 
 /**
- * Testimonial section
+ * Blog section
  */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
+export const blog: BlogSection = {
+  imageSrc: blogImage,
+  blogs: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Fragmented Thoughts',
+      href: 'https://fragmentedthoughts.jlroberts.me',
+      screenshot: blogScreenshot,
+      description: 'Random thoughts throughout development and life.',
     },
   ],
 };
@@ -383,7 +409,7 @@ export const contact: ContactSection = {
     {
       type: ContactType.LinkedIn,
       text: 'in/jlroberts1',
-      href: 'https://www.linkedin.com/in/jlroberts1'
+      href: 'https://www.linkedin.com/in/jlroberts1',
     },
     {
       type: ContactType.Github,
