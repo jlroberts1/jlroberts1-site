@@ -381,6 +381,11 @@ export const contact: ContactSection = {
       href: 'https://x.com/xoomdev',
     },
     {
+      type: ContactType.LinkedIn,
+      text: 'in/jlroberts1',
+      href: 'https://www.linkedin.com/in/jlroberts1'
+    },
+    {
       type: ContactType.Github,
       text: 'jlroberts1',
       href: 'https://github.com/jlroberts1',
@@ -393,6 +398,6 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/jlroberts1'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https:/www.linkedin.com/in/jlroberts1'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/jlroberts1'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://x.com/xoomdev'},
 ];
