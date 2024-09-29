@@ -106,7 +106,6 @@ export const aboutData: About = {
   description: `I am an Android Engineer that is passionate about technology, learning, and creating experiences. I am a Kotlin and Jetpack Compose lover. I have experience working with all of the latest Jetpack libraries such as Compose, Room, Media, WorkManager, and Material Design. I also have extensive experience in RxJava and Kotlin Coroutines / Flow, as well as Fragments and the View system. I am a big proponent of clean, sensible code, MVVM, and SOLID principles. While I'm always striving to learn how to be a better Android Engineer, currently I am also learning Go as well as some JS and React! If you want to know more, read on or contact me!`,
   aboutItems: [
     {label: 'Location', text: 'Stoutsville, Ohio', Icon: MapIcon},
-    {label: 'Age', text: '41', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Korean / Native American / Caucasion', Icon: FlagIcon},
     {label: 'Interests', text: 'Motorcycles, Guitar, Hiking', Icon: SparklesIcon},
     {label: 'Study', text: 'Udacity Kotlin Android Developer Nanodegree', Icon: AcademicCapIcon},
@@ -151,11 +150,11 @@ export const skills: SkillGroup[] = [
         level: 5,
       },
       {
-        name: 'HTML',
+        name: 'HTML/CSS',
         level: 6,
       },
       {
-        name: 'CSS',
+        name: 'Tailwind',
         level: 5,
       },
     ],

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {FC, memo, useEffect, useMemo, useRef, useState} from 'react';
 
 import {isApple, isMobile} from '../../config';
-import {blog,SectionId} from '../../data/data';
+import {blog, SectionId} from '../../data/data';
 import useWindow from '../../hooks/useWindow';
 import Section from '../Layout/Section';
 
@@ -53,10 +53,10 @@ const Blog: FC = memo(() => {
                   width={800}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 rounded-lg px-4">
-                  <h2 className="text-white text-2xl sm:text-3xl font-bold mb-2 text-center">{blogs[0].name}</h2>
+                  <h2 className="text-white text-2xl sm:text-3xl font-bold mb- text-center">{blogs[0].name}</h2>
                   <p className="text-white text-base sm:text-lg text-center">{blogs[0].description}</p>
-                  <div className="relative w-full md:w-1/2 p-4 flex items-center">
-                    <div className="inline-block px-6 py-3 bg-orange-500 text-white text-xl font-semibold rounded-md transition duration-300">
+                  <div className="py-8">
+                    <div className="inline-block px-6 py-3 bg-orange-500 text-white text-xl font-semibold rounded-md transition duration-300 mx-auto">
                       Visit My Blog
                     </div>
                   </div>
