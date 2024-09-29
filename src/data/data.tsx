@@ -268,16 +268,10 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'July 2021',
+    location: 'Udacity',
+    title: 'Android Kotlin Developer Nanodegreee',
+    content: <p>Comprehensive Nanodegree focused on Android development. Projects, courses, and practice covering custom views, lifecycles, architecure, persistence, networking, animations, testing, and much more. Real feedback during code reviews from facilitators.</p>,
   },
 ];
 
@@ -287,10 +281,15 @@ export const experience: TimelineItem[] = [
     location: 'Tinybeans',
     title: 'Engineering Manager, Mobile',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li>&#8226; Lead the mobile engineering team, delivering high-quality apps with measurable performance
+          improvements.</li>
+        <li>&#8226; Oversee project timelines and milestones, ensuring timely and efficient delivery of mobile solutions.</li>
+        <li>&#8226; Mentor and supportteammembers,fostering a collaborative and innovative work environment.</li>
+        <li>&#8226; Implement best practices in mobile development, achieving significant increases in user engagement.</li>
+        <li>&#8226; Improved project test coverages from 0 to 45% and implemented the use of feature flags to increase the quality and stability of releases.</li>
+        <li>&#8226; Created a standard for observability and traceability throughout the mobile projects to understand how our apps are performing.</li>
+      </ul>
     ),
   },
   {
@@ -298,10 +297,14 @@ export const experience: TimelineItem[] = [
     location: 'Tinybeans',
     title: 'Lead Android Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li>&#8226; Lead Android team to deliver high-quality apps, increasing user engagement by 27%</li>
+        <li>&#8226; Developed a new rewritten Android app, boosting Play Store rating from 2.2 to over 4 stars</li>
+        <li>&#8226; Optimized app performance and enhanced UI/UX for improved user experience</li>
+        <li>&#8226; Collaborated with cross-functional teams for seamless app updates</li>
+        <li>&#8226; Analyzed user feedback to implement improvements, significantly increasing user satisfaction</li>
+        <li>&#8226; Hired, onboarded, and mentored new engineers on the team</li>
+      </ul>
     ),
   },
   {
@@ -309,8 +312,13 @@ export const experience: TimelineItem[] = [
     location: 'PagerDuty',
     title: 'CAP Android Developer',
     content: (
-      <p>
-      </p>
+      <ul>
+        <li>&#8226; Developed and maintained Android apps, enhancing user experience and performance</li>
+        <li>&#8226; Collaborated with teams to deliver new features, improving app functionality</li>
+        <li>&#8226; Conducted code reviews to ensure a high-quality maintainable codebase.</li>
+        <li>&#8226; Resolved issues to reduce app crashes and improve stability</li>
+        <li>&#8226; Implemented automated testing, increasing code coverage and reliability</li>
+      </ul>
     ),
   },
   {
@@ -318,8 +326,12 @@ export const experience: TimelineItem[] = [
     location: 'Babbling Brook',
     title: 'Android Engineer',
     content: (
-      <p>
-      </p>
+      <ul>
+        <li>&#8226; Developed cutting-edge Android applications, integrating new technologies to enhance the user experience and app functionality</li>
+        <li>&#8226; Optimized app performance, reducing load times and improving user retention rates through data-driven enhancements</li>
+        <li>&#8226; Conducted thorough code reviews and implemented best practices, significantly reducing bug rates in production releases.</li>
+        <li>&#8226; Pioneered adoptions of new Android frameworks, positioning the company at the forefront of mobile development trends</li>
+      </ul>
     ),
   },
 ];
