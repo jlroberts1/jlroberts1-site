@@ -99,12 +99,13 @@ export interface TimelineItem {
  */
 export interface BlogSection {
   imageSrc?: string | StaticImageData;
-  blog: Blog;
+  blogs: Blog[];
 }
 
 export interface Blog {
   name: string;
   href: string;
+  screenshot: string;
   description: string;
 }
 
