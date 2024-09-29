@@ -7,10 +7,6 @@ import {SectionId, blog} from '../../data/data';
 import useWindow from '../../hooks/useWindow';
 import Section from '../Layout/Section';
 
-import dynamic from 'next/dynamic';
-
-const Tilt = dynamic(() => import('react-parallax-tilt'), {ssr: false});
-
 const Blog: FC = memo(() => {
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
 
