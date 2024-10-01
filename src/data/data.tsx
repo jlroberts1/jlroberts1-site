@@ -273,7 +273,7 @@ export const education: TimelineItem[] = [
   {
     date: 'July 2021',
     location: 'Udacity',
-    title: 'Android Kotlin Developer Nanodegreee',
+    title: 'Android Kotlin Developer Nanodegree',
     content: (
       <p>
         Comprehensive Nanodegree focused on Android development. Projects, courses, and practice covering custom views,
